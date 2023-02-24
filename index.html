@@ -16,7 +16,7 @@
   <body>
     <div class="contaier">
       <div class="row">
-        <div class="col-6 m-auto mt-4">
+        <div class="col-9 m-auto mt-4">
           <input
             class="form-control form-control-lg"
             type="number"
@@ -32,48 +32,28 @@
               Gönder
             </button>
           </div>
-          <div class="content">
-            <h1 class="text-center text-decoration-underline mt-2">
-              Öğünler ve Yemek Listesi
-            </h1>
-            <div class="content-text">
-              <div class="breakfast">
-                <h2>Kahvaltı</h2>
-                <div class="alert alert-success" role="alert">
-                  <h4 class="alert-heading">Well done!</h4>
-                  <p>Kahvaltı: <span class="breakfastText"></span></p>
-                </div>
-              </div>
-              <div class="snack">
-                <h2>Ara Öğün</h2>
-                <div class="alert alert-success" role="alert">
-                  <h4 class="alert-heading">Well done!</h4>
-                  <p>Ara Öğün: <span class="snackText"></span></p>
-                </div>
-              </div>
-              <div class="lunch">
-                <h2>Öğle Yemeği</h2>
-                <div class="alert alert-success" role="alert">
-                  <h4 class="alert-heading">Well done!</h4>
-                  <p>Öğle: <span class="lunchText"></span></p>
-                </div>
-              </div>
-              <div class="snackTwo">
-                <h2>Ara Öğün</h2>
-                <div class="alert alert-success" role="alert">
-                  <h4 class="alert-heading">Well done!</h4>
-                  <p>Ara Öğün: <span class="snackTwoText"></span></p>
-                </div>
-              </div>
-              <div class="eveningMeal">
-                <h2>Akşam Yemeği</h2>
-                <div class="alert alert-success" role="alert">
-                  <h4 class="alert-heading">Well done!</h4>
-                  <p>Akşam Yemeği: <span class="eveningMealText"></span></p>
-                </div>
-              </div>
-            </div>
-          </div>
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Günler</th>
+                <th scope="col">Kahvaltı</th>
+                <th scope="col">Ara Öğün</th>
+                <th scope="col">Öğle Yemeği</th>
+                <th scope="col">Ara Öğün</th>
+                <th scope="col">Akşam Yemeği</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row"></th>
+                <td class="breakfastText"></td>
+                <td class="snackText"></td>
+                <td class="lunchText"></td>
+                <td class="snackTwoText"></td>
+                <td class="eveningMealText"></td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
