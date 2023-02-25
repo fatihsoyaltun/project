@@ -164,7 +164,7 @@ urunler = {
 const hesapla = () => {
     let boy = Number(document.querySelector('.').value);
     let kilo = Number(document.querySelector('.').value);
-    let endeks = kilo / (b*b);
+    let endeks = kilo / (boy*boy);
 
     if(endeks<18){
         console.log("Zayıf" + "" + endeks.toFixed(2));
@@ -285,6 +285,42 @@ const gonder = () => {
 
 
 
+// let gender = prompt("Cinsiyetinizi girin (kadın/erkek):");
+// let age = prompt("Yaşınızı girin:");
+// let height = prompt("Boyunuzu cm cinsinden girin:");
+// let weight = prompt("Kilonuzu kg cinsinden girin:");
+
+// let bmr;
+// if (gender === "kadın") {
+//   bmr = 655 + (9.6 * weight) + (1.8 * height) - (4.7 * age);
+// } else if (gender === "erkek") {
+//   bmr = 66 + (13.7 * weight) + (5 * height) - (6.8 * age);
+// }
+
+
+// let activityLevel = prompt("Aktivite seviyenizi girin (çok az/az/orta/fazla/çok fazla):");
+// let dailyCalories;
+
+// switch (activityLevel) {
+//   case "çok az":
+//     dailyCalories = bmr * 1.2;
+//     break;
+//   case "az":
+//     dailyCalories = bmr * 1.375;
+//     break;
+//   case "orta":
+//     dailyCalories = bmr * 1.55;
+//     break;
+//   case "fazla":
+//     dailyCalories = bmr * 1.725;
+//     break;
+//   case "çok fazla":
+//     dailyCalories = bmr * 1.9;
+//     break;
+//   default:
+//     dailyCalories = bmr;
+//     break;
+// }
 
 
 
