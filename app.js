@@ -256,7 +256,6 @@ const gonder = () => {
 
 
 
-
 const bmrHesapla = () => {
     let gender = document.querySelector(".gender").value;
     let age = document.querySelector(".age").value;
@@ -268,35 +267,39 @@ const bmrHesapla = () => {
     } else if (gender === "erkek") {
       bmr = 66 + (13.7 * weight) + (5 * height) - (6.8 * age);
     }
-    console.log(bmr);
+    document.querySelector(".alert-primary").innerHTML=bmr
 }
-//document.querySelector(".hesapla-btn").addEventListener("click", bmrHesapla);
 
 
+const gunlukKalori = () => {
+    const bmr = document.querySelector(".alert-primary").innerHTML
+    let activityLevel = document.querySelector(".activityLevel").value;
+    let dailyCalories = 0;
 
-// let activityLevel = document.querySelector(".activityLevel").value;
-// let dailyCalories;
+    switch (activityLevel) {
+      case "çok az":
+        dailyCalories = bmr * 1.2;
+        break;
+      case "az":
+        dailyCalories = bmr * 1.375;
+        break;
+      case "orta":
+        dailyCalories = bmr * 1.55;
+        break;
+      case "fazla":
+        dailyCalories = bmr * 1.725;
+        break;
+      case "çok fazla":
+        dailyCalories = bmr * 1.9;
+        break;
+      default:
+        dailyCalories = bmr;
+        break;
+    }
+    
+    document.querySelector(".alert-info").innerHTML=dailyCalories;
+    }
 
-// switch (activityLevel) {
-//   case "çok az":
-//     dailyCalories = bmr * 1.2;
-//     break;
-//   case "az":
-//     dailyCalories = bmr * 1.375;
-//     break;
-//   case "orta":
-//     dailyCalories = bmr * 1.55;
-//     break;
-//   case "fazla":
-//     dailyCalories = bmr * 1.725;
-//     break;
-//   case "çok fazla":
-//     dailyCalories = bmr * 1.9;
-//     break;
-//   default:
-//     dailyCalories = bmr;
-//     break;
-// }
 
 
 // const form = document.querySelector("form");
