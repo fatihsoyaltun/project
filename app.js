@@ -1,3 +1,4 @@
+
 urunler = {
     "breakfast":[
         {
@@ -159,8 +160,28 @@ urunler = {
     ]
 }
 
-toplamKalori = 2000;
+// Kitle boy endeksi
+const hesapla = () => {
+    let boy = Number(document.querySelector('.').value);
+    let kilo = Number(document.querySelector('.').value);
+    let endeks = kilo / (boy*boy);
 
+    if(endeks<18){
+        console.log("Zayıf" + "" + endeks.toFixed(2));
+    }else if(endeks>=18 && endeks<25){
+        console.log("Normal" + "" + endeks.toFixed(2));
+    }else if(endeks>=25 && endeks<30){
+        console.log("Kilolu" + "" + endeks.toFixed(2));
+    }else if(endeks>=30 && endeks<40){
+        console.log("Obez" + "" + endeks.toFixed(2));
+    }else{
+        console.log("İleri Derece Obez" + "" + endeks.toFixed(2));
+    }
+}
+
+
+// Öğün Listesi
+toplamKalori = 2000;
 const gonder = () => {
     const gunSayısı = document.querySelector('.form-control').value;
     let gunlukUrunlerListesi = [];
@@ -201,23 +222,102 @@ const gonder = () => {
         //console.log(`Gün ${i+1} ürünleri`, gunlukUrunler);
         gunlukUrunlerListesi.push(gunlukUrunler);
     }
-        let breakfastList = "";
-        let snackList = "";
-        let lunchList = "";
-        let snackTwoList = "";
-        let eveningMealList = "";
 
-        for (let i = 0; i < gunlukUrunlerListesi.length; i++) {
-            breakfastList += gunlukUrunlerListesi[i]["breakfast"].map(u => u.id).join(", ") + ", ";
-            snackList += gunlukUrunlerListesi[i]["snack"].map(u => u.id).join(", ") + ", ";
-            lunchList += gunlukUrunlerListesi[i]["lunch"].map(u => u.id).join(", ") + ", ";
-            snackTwoList += gunlukUrunlerListesi[i]["snackTwo"].map(u => u.id).join(", ") + ", ";
-            eveningMealList += gunlukUrunlerListesi[i]["eveningMeal"].map(u => u.id).join(", ") + ", ";
-        }
+    let tbody = document.querySelector("table tbody");
+    for (let i = 0; i < gunSayısı; i++) {
+        let row = tbody.insertRow(-1);
+        let dayCell = row.insertCell(0);
+        let breakfastCell = row.insertCell(1);
+        let snackCell = row.insertCell(2);
+        let lunchCell = row.insertCell(3);
+        let snackTwoCell = row.insertCell(4);
+        let eveningMealCell = row.insertCell(5);
 
-        document.querySelector(".breakfastText").innerHTML += breakfastList;
-        document.querySelector(".snackText").innerHTML += snackList;
-        document.querySelector(".lunchText").innerHTML += lunchList;
-        document.querySelector(".snackTwoText").innerHTML += snackTwoList;
-        document.querySelector(".eveningMealText").innerHTML += eveningMealList;
+        dayCell.innerHTML = i + 1;
+        breakfastCell.innerHTML = gunlukUrunlerListesi[i]["breakfast"].map(u => u.id);
+        snackCell.innerHTML = gunlukUrunlerListesi[i]["snack"].map(u => u.id);
+        lunchCell.innerHTML = gunlukUrunlerListesi[i]["lunch"].map(u => u.id);
+        snackTwoCell.innerHTML = gunlukUrunlerListesi[i]["snackTwo"].map(u => u.id);
+        eveningMealCell.innerHTML = gunlukUrunlerListesi[i]["eveningMeal"].map(u => u.id);
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const bmrHesapla = () => {
+    let gender = document.querySelector(".gender").value;
+    let age = document.querySelector(".age").value;
+    let height = document.querySelector(".height").value;
+    let weight = document.querySelector(".weight").value;
+    let bmr = 0;
+    if (gender === "kadın") {
+      bmr = 655 + (9.6 * weight) + (1.8 * height) - (4.7 * age);
+    } else if (gender === "erkek") {
+      bmr = 66 + (13.7 * weight) + (5 * height) - (6.8 * age);
+    }
+    console.log(bmr);
+}
+//document.querySelector(".hesapla-btn").addEventListener("click", bmrHesapla);
+
+
+
+// let activityLevel = document.querySelector(".activityLevel").value;
+// let dailyCalories;
+
+// switch (activityLevel) {
+//   case "çok az":
+//     dailyCalories = bmr * 1.2;
+//     break;
+//   case "az":
+//     dailyCalories = bmr * 1.375;
+//     break;
+//   case "orta":
+//     dailyCalories = bmr * 1.55;
+//     break;
+//   case "fazla":
+//     dailyCalories = bmr * 1.725;
+//     break;
+//   case "çok fazla":
+//     dailyCalories = bmr * 1.9;
+//     break;
+//   default:
+//     dailyCalories = bmr;
+//     break;
+// }
+
+
+// const form = document.querySelector("form");
+// const gender = document.querySelector(".gender");
+// const age = document.querySelector(".age");
+// const height = document.querySelector(".height");
+// const weight = document.querySelector(".weight");
+
+// const bmrHesapla = (event) => {
+//   event.preventDefault();
+//   const selectedGender = gender.value;
+//   const userAge = age.value;
+//   const userHeight = height.value;
+//   const userWeight = weight.value;
+//   let bmr = 0;
+//   if (selectedGender === "kadın") {
+//     bmr = 655 + 9.6 * userWeight + 1.8 * userHeight - 4.7 * userAge;
+//   } else if (selectedGender === "erkek") {
+//     bmr = 66 + 13.7 * userWeight + 5 * userHeight - 6.8 * userAge;
+//   }
+//   console.log(bmr);
+// };
+
+// form.addEventListener("submit", bmrHesapla);
