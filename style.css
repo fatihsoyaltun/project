@@ -18,3 +18,8 @@ h1 {
 .btn {
     width: 100%;
 }
+
+.alert-primary,.activityLevel,.kalori-btn,.alert-info,.fs-1 {
+    display: none;
+}
+

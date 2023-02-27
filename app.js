@@ -192,9 +192,16 @@ const bmrHesapla = () => {
       bmr = 66 + (13.7 * weight) + (5 * height) - (6.8 * age);
     }
     document.querySelector(".alert-primary").innerHTML=bmr
+    document.querySelector(".fs-1").style.display="block";
+    document.querySelector(".alert-primary").style.display="block";
+    document.querySelector(".activityLevel").style.display="block";
+    document.querySelector(".kalori-btn").style.display="block";
 }
+
 // Günlük Alınması Gereken Kalori
-const gunlukKalori = () => {
+// let günlükKalori = [];
+let dailyKalori = []
+const gunlukKaloriHesapla = () => {
     const bmr = document.querySelector(".alert-primary").innerHTML
     let activityLevel = document.querySelector(".activityLevel").value;
     let dailyCalories = 0;
@@ -219,14 +226,18 @@ const gunlukKalori = () => {
         dailyCalories = bmr;
         break;
     }
-    
-    document.querySelector(".alert-info").innerHTML=dailyCalories;
+    dailyKalori.push(dailyCalories)
+    document.querySelector(".alert-info").innerHTML= dailyCalories;
+    document.querySelector(".alert-info").style.display="block";
     }
 
 
+
+
 // Öğün Listesi
-toplamKalori = 2000;
+toplamKalori = dailyKalori;
 const gonder = () => {
+    console.log("FAtih");
     const gunSayısı = document.querySelector('.form-control').value;
     let gunlukUrunlerListesi = [];
 
@@ -248,9 +259,9 @@ const gonder = () => {
                 let rastgeleUrun = urunlerListesi[Math.floor(Math.random() * urunlerListesi.length)];
                 gunlukUrunler[ogun].push(rastgeleUrun);
                 gunlukKalori += parseInt(rastgeleUrun.calorie);
-                gunlukKalori += gunlukUrunler[ogun].reduce((acc, curr) => acc + parseInt(curr.calorie), 0);
+                //gunlukKalori += gunlukUrunler[ogun].reduce((acc, curr) => acc + parseInt(curr.calorie), 0);
             }
-            if (gunlukKalori > toplamKalori) {
+            if (gunlukKalori < toplamKalori) {
                 kaloriAsildi = true;
                 gunlukKalori = 0;
                 gunlukUrunler = {
@@ -285,44 +296,3 @@ const gonder = () => {
         eveningMealCell.innerHTML = gunlukUrunlerListesi[i]["eveningMeal"].map(u => u.id);
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// const form = document.querySelector("form");
-// const gender = document.querySelector(".gender");
-// const age = document.querySelector(".age");
-// const height = document.querySelector(".height");
-// const weight = document.querySelector(".weight");
-
-// const bmrHesapla = (event) => {
-//   event.preventDefault();
-//   const selectedGender = gender.value;
-//   const userAge = age.value;
-//   const userHeight = height.value;
-//   const userWeight = weight.value;
-//   let bmr = 0;
-//   if (selectedGender === "kadın") {
-//     bmr = 655 + 9.6 * userWeight + 1.8 * userHeight - 4.7 * userAge;
-//   } else if (selectedGender === "erkek") {
-//     bmr = 66 + 13.7 * userWeight + 5 * userHeight - 6.8 * userAge;
-//   }
-//   console.log(bmr);
-// };
-
-// form.addEventListener("submit", bmrHesapla);
