@@ -161,23 +161,67 @@ urunler = {
 }
 
 // Kitle boy endeksi
-const hesapla = () => {
-    let boy = Number(document.querySelector('.').value);
-    let kilo = Number(document.querySelector('.').value);
-    let endeks = kilo / (boy*boy);
+// const hesapla = () => {
+//     let boy = Number(document.querySelector('.').value);
+//     let kilo = Number(document.querySelector('.').value);
+//     let endeks = kilo / (boy*boy);
 
-    if(endeks<18){
-        console.log("Zayıf" + "" + endeks.toFixed(2));
-    }else if(endeks>=18 && endeks<25){
-        console.log("Normal" + "" + endeks.toFixed(2));
-    }else if(endeks>=25 && endeks<30){
-        console.log("Kilolu" + "" + endeks.toFixed(2));
-    }else if(endeks>=30 && endeks<40){
-        console.log("Obez" + "" + endeks.toFixed(2));
-    }else{
-        console.log("İleri Derece Obez" + "" + endeks.toFixed(2));
+//     if(endeks<18){
+//         console.log("Zayıf" + "" + endeks.toFixed(2));
+//     }else if(endeks>=18 && endeks<25){
+//         console.log("Normal" + "" + endeks.toFixed(2));
+//     }else if(endeks>=25 && endeks<30){
+//         console.log("Kilolu" + "" + endeks.toFixed(2));
+//     }else if(endeks>=30 && endeks<40){
+//         console.log("Obez" + "" + endeks.toFixed(2));
+//     }else{
+//         console.log("İleri Derece Obez" + "" + endeks.toFixed(2));
+//     }
+// }
+
+// Bazal Metobolizma
+const bmrHesapla = () => {
+    let gender = document.querySelector(".gender").value;
+    let age = document.querySelector(".age").value;
+    let height = document.querySelector(".height").value;
+    let weight = document.querySelector(".weight").value;
+    let bmr = 0;
+    if (gender === "kadın") {
+      bmr = 655 + (9.6 * weight) + (1.8 * height) - (4.7 * age);
+    } else if (gender === "erkek") {
+      bmr = 66 + (13.7 * weight) + (5 * height) - (6.8 * age);
     }
+    document.querySelector(".alert-primary").innerHTML=bmr
 }
+// Günlük Alınması Gereken Kalori
+const gunlukKalori = () => {
+    const bmr = document.querySelector(".alert-primary").innerHTML
+    let activityLevel = document.querySelector(".activityLevel").value;
+    let dailyCalories = 0;
+
+    switch (activityLevel) {
+      case "çok az":
+        dailyCalories = bmr * 1.2;
+        break;
+      case "az":
+        dailyCalories = bmr * 1.375;
+        break;
+      case "orta":
+        dailyCalories = bmr * 1.55;
+        break;
+      case "fazla":
+        dailyCalories = bmr * 1.725;
+        break;
+      case "çok fazla":
+        dailyCalories = bmr * 1.9;
+        break;
+      default:
+        dailyCalories = bmr;
+        break;
+    }
+    
+    document.querySelector(".alert-info").innerHTML=dailyCalories;
+    }
 
 
 // Öğün Listesi
@@ -256,49 +300,7 @@ const gonder = () => {
 
 
 
-const bmrHesapla = () => {
-    let gender = document.querySelector(".gender").value;
-    let age = document.querySelector(".age").value;
-    let height = document.querySelector(".height").value;
-    let weight = document.querySelector(".weight").value;
-    let bmr = 0;
-    if (gender === "kadın") {
-      bmr = 655 + (9.6 * weight) + (1.8 * height) - (4.7 * age);
-    } else if (gender === "erkek") {
-      bmr = 66 + (13.7 * weight) + (5 * height) - (6.8 * age);
-    }
-    document.querySelector(".alert-primary").innerHTML=bmr
-}
 
-
-const gunlukKalori = () => {
-    const bmr = document.querySelector(".alert-primary").innerHTML
-    let activityLevel = document.querySelector(".activityLevel").value;
-    let dailyCalories = 0;
-
-    switch (activityLevel) {
-      case "çok az":
-        dailyCalories = bmr * 1.2;
-        break;
-      case "az":
-        dailyCalories = bmr * 1.375;
-        break;
-      case "orta":
-        dailyCalories = bmr * 1.55;
-        break;
-      case "fazla":
-        dailyCalories = bmr * 1.725;
-        break;
-      case "çok fazla":
-        dailyCalories = bmr * 1.9;
-        break;
-      default:
-        dailyCalories = bmr;
-        break;
-    }
-    
-    document.querySelector(".alert-info").innerHTML=dailyCalories;
-    }
 
 
 
