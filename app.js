@@ -257,48 +257,24 @@ const gonder = () => {
 
 
 
+const bmrHesapla = () => {
+    let gender = document.querySelector(".gender").value;
+    let age = document.querySelector(".age").value;
+    let height = document.querySelector(".height").value;
+    let weight = document.querySelector(".weight").value;
+    let bmr = 0;
+    if (gender === "kadın") {
+      bmr = 655 + (9.6 * weight) + (1.8 * height) - (4.7 * age);
+    } else if (gender === "erkek") {
+      bmr = 66 + (13.7 * weight) + (5 * height) - (6.8 * age);
+    }
+    console.log(bmr);
+}
+//document.querySelector(".hesapla-btn").addEventListener("click", bmrHesapla);
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// let gender = prompt("Cinsiyetinizi girin (kadın/erkek):");
-// let age = prompt("Yaşınızı girin:");
-// let height = prompt("Boyunuzu cm cinsinden girin:");
-// let weight = prompt("Kilonuzu kg cinsinden girin:");
-
-// let bmr;
-// if (gender === "kadın") {
-//   bmr = 655 + (9.6 * weight) + (1.8 * height) - (4.7 * age);
-// } else if (gender === "erkek") {
-//   bmr = 66 + (13.7 * weight) + (5 * height) - (6.8 * age);
-// }
-
-
-// let activityLevel = prompt("Aktivite seviyenizi girin (çok az/az/orta/fazla/çok fazla):");
+// let activityLevel = document.querySelector(".activityLevel").value;
 // let dailyCalories;
 
 // switch (activityLevel) {
@@ -323,68 +299,25 @@ const gonder = () => {
 // }
 
 
+// const form = document.querySelector("form");
+// const gender = document.querySelector(".gender");
+// const age = document.querySelector(".age");
+// const height = document.querySelector(".height");
+// const weight = document.querySelector(".weight");
 
+// const bmrHesapla = (event) => {
+//   event.preventDefault();
+//   const selectedGender = gender.value;
+//   const userAge = age.value;
+//   const userHeight = height.value;
+//   const userWeight = weight.value;
+//   let bmr = 0;
+//   if (selectedGender === "kadın") {
+//     bmr = 655 + 9.6 * userWeight + 1.8 * userHeight - 4.7 * userAge;
+//   } else if (selectedGender === "erkek") {
+//     bmr = 66 + 13.7 * userWeight + 5 * userHeight - 6.8 * userAge;
+//   }
+//   console.log(bmr);
+// };
 
-// toplamKalori = 2000;
-
-// const gonder = () => {
-//     const gunSayısı = document.querySelector('.form-control').value;
-//     let gunlukUrunlerListesi = [];
-
-//     for (let i = 0; i < gunSayısı; i++) {
-//         let gunlukUrunler = {
-//             breakfast: [],
-//             snack: [],
-//             lunch: [],
-//             snackTwo: [],
-//             eveningMeal: []
-//         };
-//         let gunlukKalori = 0;
-//         let kaloriAsildi = true;
-
-//         while (kaloriAsildi) {
-//             kaloriAsildi = false;
-//             for (let ogun in urunler) {
-//                 let urunlerListesi = urunler[ogun];
-//                 let rastgeleUrun = urunlerListesi[Math.floor(Math.random() * urunlerListesi.length)];
-//                 gunlukUrunler[ogun].push(rastgeleUrun);
-//                 gunlukKalori += parseInt(rastgeleUrun.calorie);
-//                 gunlukKalori += gunlukUrunler[ogun].reduce((acc, curr) => acc + parseInt(curr.calorie), 0);
-//             }
-//             if (gunlukKalori > toplamKalori) {
-//                 kaloriAsildi = true;
-//                 gunlukKalori = 0;
-//                 gunlukUrunler = {
-//                     breakfast: [],
-//                     snack: [],
-//                     lunch: [],
-//                     snackTwo: [],
-//                     eveningMeal: []
-//                 };
-//             }
-//         }
-//         console.log(gunlukKalori);
-//         //console.log(`Gün ${i+1} ürünleri`, gunlukUrunler);
-//         gunlukUrunlerListesi.push(gunlukUrunler);
-//     }
-//         let breakfastList = "";
-//         let snackList = "";
-//         let lunchList = "";
-//         let snackTwoList = "";
-//         let eveningMealList = "";
-
-//         for (let i = 0; i < gunlukUrunlerListesi.length; i++) {
-//             breakfastList += gunlukUrunlerListesi[i]["breakfast"].map(u => u.id).join(", ");
-//             snackList += gunlukUrunlerListesi[i]["snack"].map(u => u.id).join(", ");
-//             lunchList += gunlukUrunlerListesi[i]["lunch"].map(u => u.id).join(", ");
-//             snackTwoList += gunlukUrunlerListesi[i]["snackTwo"].map(u => u.id).join(", ");
-//             eveningMealList += gunlukUrunlerListesi[i]["eveningMeal"].map(u => u.id).join(", ");
-//         }
-
-//         document.querySelector(".breakfastText").innerHTML += breakfastList;
-//         document.querySelector(".snackText").innerHTML += snackList;
-//         document.querySelector(".lunchText").innerHTML += lunchList;
-//         document.querySelector(".snackTwoText").innerHTML += snackTwoList;
-//         document.querySelector(".eveningMealText").innerHTML += eveningMealList;
-// }
-
+// form.addEventListener("submit", bmrHesapla);
