@@ -318,8 +318,12 @@ body {
 }
 .sinav_ekrani .sorular {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  margin-top: 5rem;
   border-radius: 10px;
+}
+.sinav_ekrani .sorular h4 {
+  margin: 0 !important;
+  padding: 1rem;
+  border-bottom: 1px solid gray;
 }
 .sinav_ekrani .sorular p {
   margin: 0;
@@ -352,6 +356,8 @@ body {
 }
 .sinav_ekrani .cevaplar form .yanitla_buton {
   padding: 0.5rem;
+  border: none;
+  border-radius: 10px;
   background-color: crimson;
   color: white;
   width: 250px;
