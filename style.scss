@@ -369,9 +369,14 @@ body{
     justify-content: center;
     .sorular{
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-        margin-top: 5rem;
+        // margin-top: 5rem;
         // border:1px solid black;
         border-radius: 10px;
+        h4{
+            margin: 0 !important;
+            padding: 1rem;
+            border-bottom: 1px solid gray;
+        }
         p{
             margin: 0;
             padding: 1rem;
@@ -402,6 +407,8 @@ body{
             }
             .yanitla_buton{
                 padding: .5rem;
+                border: none;
+                border-radius: 10px;
                 background-color: crimson;
                 color: white;
                 width: 250px;
