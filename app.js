@@ -56,21 +56,27 @@
 
   loading = document.querySelector(".loading");
   start_ekran = document.querySelector(".start_ekran");
+  sinav_ekrani = document.querySelector(".sinav_ekrani");
   sinav_baslat_btn = document.querySelector(".sinav_baslat");
 
   sinav_baslat_btn.addEventListener("click", ()=> {
     start_ekran.style.display = "none";
+    loading.style.display ="flex";
     setTimeout(function() {
-          loading.style.display = 'none';
+      loading.style.display = 'none';
+    }, 2000);
+    setTimeout(function() {
+          sinav_ekrani.style.display = "block";
+          
         }, 2000);
   });
   
 
-  window.addEventListener('load', function() {
-    setTimeout(function() {
-      loading.style.display = 'none';
-    }, 2000);
-  });
+  // window.addEventListener('load', function() {
+  //   setTimeout(function() {
+  //     loading.style.display = 'none';
+  //   }, 2000);
+  // });
 
   // Soru dizisindeki indeks için sayaç
 let questionIndex = 0;
