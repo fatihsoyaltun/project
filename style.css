@@ -334,11 +334,11 @@ body {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 .sinav_ekrani .cevaplar form .siklar {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   border: 1px solid black;
   border-radius: 10px;
   padding: 0.5rem;
