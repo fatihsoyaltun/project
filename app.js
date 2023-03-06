@@ -36,19 +36,38 @@
 //     $(this).toggleClass('active not-active');
 // });
 
-const form = document.getElementById("myForm");
-  const resimYukle = document.getElementById("resimYukle");
-  const gorsel = document.getElementById("gorsel");
-  const gonderBtn = document.getElementById("gonderBtn");
+// const form = document.getElementById("myForm");
+//   const resimYukle = document.getElementById("resimYukle");
+//   const gorsel = document.getElementById("gorsel");
+//   const gonderBtn = document.getElementById("gonderBtn");
 
-  form.addEventListener("submit", function(e) {
-    e.preventDefault();
-    const dosya = resimYukle.files[0];
-    if (dosya) {
-      const okuyucu = new FileReader();
-      okuyucu.readAsDataURL(dosya);
-      okuyucu.onload = function() {
-        gorsel.innerHTML = `<img src="${this.result}">`;
-      }
-    }
+//   form.addEventListener("submit", function(e) {
+//     e.preventDefault();
+//     const dosya = resimYukle.files[0];
+//     if (dosya) {
+//       const okuyucu = new FileReader();
+//       okuyucu.readAsDataURL(dosya);
+//       okuyucu.onload = function() {
+//         gorsel.innerHTML = `<img src="${this.result}">`;
+//       }
+//     }
+//   });
+
+
+  loading = document.querySelector(".loading");
+  start_ekran = document.querySelector(".start_ekran");
+  sinav_baslat_btn = document.querySelector(".sinav_baslat");
+
+  sinav_baslat_btn.addEventListener("click", ()=> {
+    start_ekran.style.display = "none";
+    setTimeout(function() {
+          loading.style.display = 'none';
+        }, 2000);
   });
+  
+
+  // window.addEventListener('load', function() {
+  //   setTimeout(function() {
+  //     loading.style.display = 'none';
+  //   }, 2000);
+  // });

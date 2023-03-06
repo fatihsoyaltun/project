@@ -1,0 +1,42 @@
+[
+    {   "id":"Html",
+        "question":"Aşağıdaki web sitesi türlerinden hangisi açıklamada verilenle eşleşmektedir: 'Uyum sağlama özelliği bulunmayan, sabit ögelere sahip sitelerdir.'",
+        "a":"Pratik",
+        "b":"Statik",
+        "c":"Dinamik",
+        "d":"Stabil",
+        "answer":"Statik"
+    },
+    {   "id":"Html",
+        "question":"Aşağıdaki web sitesi türlerinden hangisi açıklamada verilenle eşleşmektedir: 'Koşullara ve kullanıcılara göre uyum sağlayan sitelerdir'",
+        "a":"Pratik",
+        "b":"Statik",
+        "c":"Dinamik",
+        "d":"Stabil",
+        "answer":"Dinamik"
+    },
+    {   "id":"Html",
+        "question":"Hangisi Front-end yazarken kullanacağımız dillerden değildir ?",
+        "a":"HTML",
+        "b":"Python",
+        "c":"Javascript",
+        "d":"CSS",
+        "answer":"Python"
+    },
+    {   "id":"Html",
+        "question":"HTML'in tam olarak açılımı nedir ?",
+        "a":"Home Tool Markup Language",
+        "b":"Hyperlinks and Text Markup Language",
+        "c":"Hyperlinks Text Markup Language",
+        "d":"Hiper Tool Markup Language",
+        "answer":"Hyperlinks Text Markup Language"
+    },
+    {   "id":"Html",
+        "question":"HTML < > arasına yazılanlara ne denir ?",
+        "a":"Etiket",
+        "b":"Parametre",
+        "c":"Komut",
+        "d":"Menü",
+        "answer":"Etiket"
+    }
+]

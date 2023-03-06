@@ -286,6 +286,7 @@ body{
             li:hover{
                 background-color:#888;
                 border-radius: 10px;
+                
             }
         }
     }
@@ -334,5 +335,86 @@ body{
 }
 
 
+// exam_html
 
 
+.start_ekran{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    button{
+        background-color: crimson;
+        color: white;
+        padding: 1rem;
+        border: 2px solid black;
+    }
+    button:hover{
+        background-color: rgb(187, 17, 51);
+    }
+}
+.loading{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+
+.sinav_ekrani{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    .sorular{
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        margin-top: 5rem;
+        // border:1px solid black;
+        border-radius: 10px;
+        p{
+            margin: 0;
+            padding: 1rem;
+        }
+    }
+    .cevaplar{
+        display: flex;
+        justify-content: center;
+        margin-top: 2rem;
+        form{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            gap: 1rem;
+            .siklar{
+                display: flex;
+                justify-content: center;
+                border: 1px solid black;
+                border-radius: 10px;
+                padding: .5rem;
+                input{
+                    margin-right: .5rem;                    
+                }
+                h5{
+                    margin-right: .5rem;
+                    margin-bottom: 0;
+                }
+                label{
+                    
+                }
+            }
+            .yanitla_buton{
+                padding: .5rem;
+                background-color: crimson;
+                color: white;
+                width: 250px;
+                transition: .8s;
+            }
+            .yanitla_buton:hover{
+                scale: 1.1;
+            }
+            
+        }
+    }
+
+}
