@@ -48,5 +48,5 @@ function showQuestion() {
     });
 }
 
-// Sayfa yüklendiğinde soruları görüntüleyin
+// Sayfa yüklendiğinde soruları görüntüleyin bunlar eklenecek
 window.onload = showQuestion;
