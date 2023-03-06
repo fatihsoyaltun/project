@@ -229,9 +229,10 @@ const gunlukKaloriHesapla = () => {
     dailyKalori.push(dailyCalories)
     document.querySelector(".alert-info").innerHTML= dailyCalories;
     document.querySelector(".alert-info").style.display="block";
+    console.log(dailyKalori);
     }
 
-
+    
 
 
 // Öğün Listesi
