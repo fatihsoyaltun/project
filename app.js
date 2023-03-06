@@ -123,9 +123,8 @@ function showQuestion() {
     });
 }
 
-// Sayfa yüklendiğinde soruları görüntüleniyor
+// Sayfa yüklendiğinde soruları görüntülecek
 window.onload = showQuestion;
-
 
 
 
