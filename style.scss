@@ -1,0 +1,338 @@
+
+body{
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+
+// index_html
+.index_nav{
+    form{
+        input{
+            width: 350px;
+            border:none !important;
+            
+        }
+        button{
+            border: none;
+        }
+    }
+    .social_media{
+        a{
+            text-decoration: none;
+            color: white;
+            padding-right: 1rem;
+            
+            i{
+                font-size: 25px;
+            }
+            .bi-instagram{
+                color: #C13584;
+            }
+            .bi-facebook{
+                color: #4267B2;
+            }
+            .bi-linkedin{
+                color: #0077b5;
+            }
+            .bi-youtube{
+                color: #FF0000;
+            }
+        }
+    }
+    .btn_open{
+        background-color: crimson !important;
+        border: none;
+    }
+    .btn_open:hover{
+        background-color: rgb(161, 17, 46) !important;
+    }
+    ul{
+        li{
+            display: flex;
+            align-items: center;
+            a{
+                color: white !important;
+                font-size: small !important;
+            }
+            .giris_btn{
+                color: white;
+                background-color:crimson;
+                border: none;
+                font-size: small !important;
+            }
+            .giris_btn:hover{
+                background-color: rgb(161, 17, 46) !important;
+                color: white;
+            }
+        }
+    }
+}
+
+.master_background{
+    background: linear-gradient(rgba(33, 45, 70, 0.7), rgba(33,45,70,.5)) ,  url("/img/exam-1.jpg");
+    background-position: center;
+    background-size: contain;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    height: 80.2vh;
+    .left_canvas{
+        .offcanvas-start{
+            .offcanvas-header{
+                h5{
+                    font-weight: 50px;
+                }
+            }
+        }
+    }
+    .right_canvas{
+        .offcanvas-end{
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+            background: rgb(0,0,0);
+            background: linear-gradient(270deg, rgba(0,0,0,1) 0%, rgba(50,50,49,1) 50%, rgba(119,119,119,0.7792366946778712) 100%);
+            .offcanvas-header{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                background: rgb(220,20,60);
+                background: linear-gradient(270deg, rgba(220,20,60,1) 0%, rgba(220,20,60,0.8408613445378151) 50%, rgba(220,20,60,0.633578431372549) 100%);
+                
+            }
+            .offcanvas-body{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                form{
+                    h5{
+                        color: white;
+                        margin-bottom: 2rem;
+                        border-bottom: 1px solid white;
+                    }
+                    display:inline-flex;
+                    flex-direction: column;
+                    width: 80%;
+                    text-align: center;
+                    input{
+                        padding: .2rem;
+                        border-radius: 5px;
+                        
+                    }
+                    label{
+                        color: white;
+                    }
+                    .sifremi_unuttum{
+                        text-decoration: none;
+                        color: white;
+                    }
+                    .sifremi_unuttum:hover{
+                        font-weight: bold;
+                    }
+                    button{
+                        background-color: crimson;
+                        padding:.2rem;
+                        width: 150px;
+                        border-radius: 10px;
+                        border: none;
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+    .slideshow-container {
+        position: relative;
+        .mySlides {
+            display: none;
+            padding: 10rem;
+            text-align: center;
+            align-items: center;
+            q{
+                font-style: italic;
+                font-size: 30px;
+                color: white;
+            }
+            .author{
+                color: cornflowerblue;
+            
+            }
+        }
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            margin-top: -30px;
+            padding: 16px;
+            color: #888;
+            font-weight: bold;
+            font-size: 20px;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+        .next {
+            position: absolute;
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        .prev:hover, .next:hover {
+            background-color: rgba(0,0,0,0.8);
+            color: white;
+        }
+        .dot-container {
+            text-align: center;
+            padding: 20px;
+            background: #ddd;
+            .dot {
+                cursor: pointer;
+                height: 15px;
+                width: 15px;
+                margin: 0 2px;
+                background-color: #bbb;
+                border-radius: 50%;
+                display: inline-block;
+                transition: background-color 0.6s ease;
+            }
+            .active, .dot:hover {
+            background-color:white;
+            }
+        }
+        
+    }   
+    
+}
+
+
+//userprofil_html
+.userprofil_nav{
+    .navbar-collapse{
+        ul{
+            li{
+                font-size: small;
+                display: flex;
+                align-items: center;
+                .small_user_name{
+                    margin-bottom: 0;
+                }
+                a{
+                    display: inline-flex;
+                    align-items: center;
+                    color: white;
+                    .small_photo{
+                        border: 2px solid white;
+                        border-radius: 100%;
+                        overflow: hidden;
+                        width: 30px;
+                        height:30px;
+                        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+                        img{
+                            width:90%;
+                        };
+                    }
+                }
+            }
+            button{
+                background-color: crimson;
+                color: white;
+                padding: .2rem;
+                border-radius: 10px;
+                i{
+                    font-style: normal;
+                }
+            }
+        }
+    }
+}
+
+.information{
+    .ana_accordion_left{
+        // height: 100vh;
+        background-color:#bbb;
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+        position: absolute;
+        width: 95%;
+        z-index: 1;
+    }
+    .ana_sayfa_buton{
+        a{
+            text-decoration: none;
+            color: black;
+        }
+    }
+    .ana_sayfa_buton:not(.collapsed)::after{
+        background-image: none;
+    }
+    .ana_sayfa_buton:not(.collapsed){
+        background-color: white;
+    }
+    button{
+        a{
+            text-decoration: none;
+            color: black;
+        }
+    }
+    .acrd{
+        ul{
+            padding: 0 !important;
+            li{
+                list-style-type: none;
+                padding: .5rem;
+                a{
+                    text-decoration: none;
+                    color: black;
+                    
+                }
+            }
+            li:hover{
+                background-color:#888;
+                border-radius: 10px;
+            }
+        }
+    }
+    .personel_bilgileri_left{
+        a{
+            font-size: 14px;
+        }
+        ul{
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+        .profil_photo{
+            margin-top: 1rem;
+            width: 150px;
+            height: 200px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            background-image: url(/img/foto_yukle.jpg);
+            background-position: center;
+            background-size: contain;
+            background-size: cover;
+            img{
+                width: 110%;
+            }
+        }
+    }
+    .personel_bilgileri_right{
+        margin: 2rem;
+        border: 2px solid black;
+        border-radius: 10px;
+        padding: 1.2rem;
+        box-shadow: 6px 4px 8px -2px;
+    }
+    .skills{
+        box-shadow: 6px 4px 8px -2px;
+        border: 2px solid black;
+        border-radius: 10px;
+        padding: 1.2rem;
+        .skill{
+            .progress{
+                height: 19.2px;
+                margin-bottom: 8px;
+            }
+        }
+    }
+}
+
+
+
+
